@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="../css/Style.css">
+    <style>
+      /* reseting default margins and padding for all the elements*/
+      *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+    }
+    /* set text alignment to center for elements with class 'top' */
+    .top{
+    text-align: center  
+}
+/*Defining styles for featured products section*/
+.featuredproducts .image{
+   
+    width: 24px;
+    min-width: 280px;
+    padding: 12px 14px;
+    border: 1px ;
+    border-radius: 1px solid ;
+    cursor: pointer;  
+}
+.featuredproducts .container{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    flex-wrap:wrap;
+    flex-direction:row;
+    background-color: lightskyblue;  
+}
+.featuredproducts .Description{
+    background-color: lightgreen;
+}
+.featuredproducts .buy:hover{
+    
+    color: #ffffff;
+  transition: 0.2s ease-in-out;
+}
+
+.featuredproducts .buy{
+   border-style: groove;
+    inline-size: 100%;
+    padding: 10px 10px;
+    background-color: green;
+}
+ /* Define styles for new products section */
+.new{
+  background-color: lightskyblue;
+}
+.new img{
+  width:500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    padding-top: 20px;
+}
+.buy:hover{
+    color: #ffffff;
+    cursor: pointer;
+}
+.new .productdetails{
+    background-color: lightgreen;
+    width: 40%;
+    margin: auto;
+    height: 250px;
+}
+/* Styling for all elements in products section */
+.allproducts .image{
+    width: 300px;
+    padding: 12px 15px;
+    border: 5px;
+    border-radius: 1px ;
+    cursor: pointer;
+    margin: 10px;
+}
+.allproducts .details{
+    background-color: lightgreen;
+    color: #000000;
+} 
+.allproducts{
+  width:100%;
+  height:auto;
+  display: flex;
+  justify-content: space-around ;
+  flex-direction: row;
+  flex-flow: wrap;
+  background-color:lightskyblue;
+}
+
+.allproducts .buy{
+    background-color: green;
+}
+/* Class buy inside section all products is hovered.*/
+.allproducts .buy:hover{
+    color: #ffffff;
+}
+/* Define styles for body element */
+      body{
+        margin: 0;
+       background-color: #f7f7f7;
+        }
+        /* Defining styles for the buy option */
+        .buy {
+          color: black;
+          margin-top: 20px;
+          padding: 10px;
+        }
+        
+    </style>
+    <script>
+      /*Alert message display fuction when client click buy now button.*/
+       function myFunction() {
+  alert("Thank You For Purchasing! We'll get back to you soon.");
+       }
+    </script>
+</head>
+<body>
+  <!--Navigation bar html code including website logo and webpages with internal links -->
+  <navbar>
+    <a href="#"><img src="../images/logodemo1.png" class="logo"></a>
+    <ul>
+      <li><a href="../html/homepage.html">Home</a></li>
+      <li><a href="../html/Products.html">Products</a></li>
+      <li><a href="../html/Blog.html">Blog</a></li>
+      <li><a href="../html/Research.html">Research</a></li>
+      <li><a href="../html/About Us.html">About Us</a></li>
+    </ul>
+</navbar>
+<!--Featured collections items with image,discounted and actual price and product description with buy now button including some inline css-->
+    <div class="top" style="padding-top: 150px;">
+       <h1 style="text-decoration: underline;">Featured Collection</h1>
+       <p style="padding: 15px; text-decoration: underline;color: black; font-size: 25px; font-family: 'Times New Roman', Times, serif;">(Our New Arrivals)</p>
+    </div>
+    <section class="featuredproducts"> 
+       <div class="container">
+       <div class="image">
+          <img src="../images/Juniper bonsai tree.jpg" width="100%" height="250px">
+          <div class="Description">
+            <h3 style="padding: 10px; text-align: center;text-decoration: underline  ;">Juniper(needle-like foliage)</h3>
+            <p style="text-decoration-line: line-through ;text-align: center;">Rs 4200</p>
+            <h5 style="text-align: center;font-family: Arial;">Price:Rs 3500</h5><div cl
+            <p style="text-align: center">The juniper genus is made up of  about 50 to 70 different species within the cypress family.They are evergreen coniferous trees.This is the popular and beautiful bonsai .</p>
+            <div class="buy">
+              <p onclick="myFunction()" style=" font-family:'Gill Sans';font-size: 22px;border: 1px;border-radius: 1px;text-align: center">BUY NOW</p>
+            </div>
+            </div>
+          </div>
+       </div>
+            <div class="image">
+            <img src="../images/Azalea.jpg" width="100%" height="250px" >
+           
+            <div class="Description"> 
+              <h3 style="padding: 10px; text-align: center;text-decoration: underline  ;">Azalea</h3>
+              <p style="text-decoration-line: line-through ;text-align: center;">Rs 3500</p>
+              <h5 style="text-align: center;font-family: Arial;">Price:Rs 3000</h5>
+              <p style="text-align: center;">The leaves of the Azalea bonsai are dark green and differ in size and shape,depending on the cultivar.They are evergreen small shurbs and should be kept outdoors.</p>
+              <div class="buy">
+                <p onclick="myFunction()" style=" font-family:'Gill Sans';font-size: 22px;border: 1px;border-radius: 1px; text-align: center;">BUY NOW</p>
+              </div>  
+            </div>
+         </div>
+         <div class="image">
+          <img src="../images/Ficus bonsai tree.jpg" width="100%" height="250px">
+          <div class="Description">
+            <h3 style="padding: 10px; text-align: center;text-decoration: underline  ;">Ficus</h3>
+            <p style="text-decoration-line: line-through ;text-align: center;">Rs 2800</p>
+            <h5 style="text-align: center;font-family: Arial;">Price:Rs 2500</h5>
+            <p style="text-align: center;">Ficus produce glossy,waxy leaves which are long lasting . They can feature aerial roots from the trunk and branches.It is one of the most popular tree for indoor bonsai.</p>
+            <div class="buy">
+              <p onclick="myFunction()" style=" font-family:'Gill Sans';font-size: 22px;border: 1px;border-radius: 1px;text-align: center;">BUY NOW</p>
+            </div>
+          </div>
+       </div>
+        </div>
+      </section> 
+      <!-- Special offer for a product in the website with product description-->
+      <h1 style="font-family: 'Times New Roman';text-decoration: underline ;text-align: center;text-transform: capitalize;padding: 100px;">Special Offer (Heavy Discount)</h1>
+      <div class="new">
+        <img src="../images/premna bonsai tree.jpeg">
+      <div class="productdetails">
+        <h3 style="padding: 10px; text-align: center;text-decoration: underline  ;">Premna</h3>
+        <h5 style="text-align: center;font-family: Arial">Original Price : <span style="text-decoration: line-through;">Rs 10000</span> </h5>
+        <h5 style="text-align: center;font-family: Arial">Discounted Price : <span>Rs 6500</span> </h5>
+          <p style="text-align:center;font-weight: bold;">[Free Shipping all over Nepal]</p>
+          <p style="text-align: center;">This is a great bonsai tree with its naturally small leaves.<br>This tropical bonsai is used a lot in Thailand,Philippines and Indonesia.<br>It grows very fast and will thicken up quickly.</p>
+        <div class="buy">
+        <p onclick="myFunction()" style=" font-family:'Gill Sans';font-size: 22px;border: 1px ;border-radius: 1px;text-align: center;border-style: groove;padding: 10px 10px;width: 50%;background-color: green;margin: auto;">BUY NOW</p>
+      </div>
+      </div>
+      </div>
+    <!-- All products with inline styling and description with onclick function also-->
+      <h1 style="font-family: 'Times New Roman';text-decoration: underline ;text-align: center;text-transform: capitalize; padding:100px;">All Products</h1>
+      <section class="allproducts">
+        <div class="container">
+      <div class="image">
+        <img src="../images/Wisteria.jpg" width="100%" height="250px"> 
+        <div class="details">
+        <h3 style="padding: 10px; text-align: center;text-decoration: underline  ;">Wisteria</h3>
+        <h5 style="text-align: center;font-family: Arial">Original Price : <span style="text-decoration: line-through;">Rs 4200</span> </h5>
+        <h5 style="text-align: center;font-family: Arial">Discounted Price : <span>Rs 3799</span> </h5>
+          <p style="text-align:center">Wisteria are very well suited for bonsai but their special feature is its flowers which are really very attractive.They are of medium or large size because the long flower clusters need some height to hang.</p>
+          <div class="buy">
+            <p onclick="myFunction()" style=" font-family:'Gill Sans';font-size: 22px;border: 1px;border-radius: 1px;text-align: center">BUY NOW</p>
+          </div>
+        </div>
+      </div>
+        </div>
+      <div class="image">
+        <img src="../images/Wattle.jpg" width="100%" height="250px">
+        <div class="details">
+        <h3 style="padding: 10px; text-align: center;text-decoration: underline  ;">Wattle</h3>
+        <h5 style="text-align: center;font-family: Arial">Original Price : <span style="text-decoration: line-through;">Rs 4000</span> </h5>
+        <h5 style="text-align: center;font-family: Arial">Discounted Price : <span>Rs 3599</span> </h5>
+          <p style="text-align:center">This is broadleaf evergreen tree or shurb with compound pinnate leaves in most cases.They produce a lot of pollen and attract isects especially bees. It can be grown up indoor and outdoor as well. </p>
+          <div class="buy">
+            <p onclick="myFunction()" style=" font-family:'Gill Sans';font-size: 22px;border: 1px;border-radius: 1px;text-align: center">BUY NOW</p>
+        </div>
+        </div>
+      </div>
+      <div class="image">
+        <img src="../images/shohin-morten bonsai tree.jpg" width="100%" height="250px">
+        <div class="details">
+        <h3 style="padding: 10px; text-align: center;text-decoration: underline  ;">Shohin</h3>
+        <h5 style="text-align: center;font-family: Arial">Original Price : <span style="text-decoration: line-through;">Rs 3999</span> </h5>
+        <h5 style="text-align: center;font-family: Arial">Discounted Price : <span>Rs 3499</span> </h5>
+          <p style="text-align:center">Shohin means "a small thing",indicating it being even smaller than Bonsai. Although no exact rules were ever formulated, a tree is considered to be Shohin Bonsai when under 25cm tall.</p>
+          <div class="buy">
+            <p onclick="myFunction()" style=" font-family:'Gill Sans';font-size: 22px;border: 1px;border-radius: 1px;text-align: center">BUY NOW</p>
+        </div>
+        </div>
+      </div>
+      <div class="image">
+        <img src="../images/Red Maple.jpg" width="100%" height="250px">
+        <div class="details">
+        <h3 style="padding: 10px; text-align: center;text-decoration: underline  ;">Red Mapple</h3>
+        <h5 style="text-align: center;font-family: Arial">Original Price : <span style="text-decoration: line-through;">Rs 3500</span> </h5>
+        <h5 style="text-align: center;font-family: Arial">Discounted Price : <span>Rs 2699</span> </h5>
+          <p style="text-align:center">The bark on young branches and trunks is usually green and turns brown or light gray with age.A red maple tree likes a climate that is moist and cool, with moderate rainfall.</p>
+          <div class="buy">
+            <p onclick="myFunction()" style=" font-family:'Gill Sans';font-size: 22px;border: 1px;border-radius: 1px;text-align: center">BUY NOW</p>
+        </div>
+        </div>
+      </div>
+      <div class="image">
+        <img src="../images/Bonsai chile tree.jpg" width="100%" height="250px">
+        <div class="details">
+        <h3 style="padding: 10px; text-align: center;text-decoration: underline  ;">Bonsai Chile Tree</h3>
+        <h5 style="text-align: center;font-family: Arial">Original Price : <span style="text-decoration: line-through;">Rs 2500</span> </h5>
+        <h5 style="text-align: center;font-family: Arial">Discounted Price : <span>Rs 2000</span> </h5>
+          <p style="text-align:center">The Rainbow Chili Bonsai is one of the fastest, easiest and arguably the prettiest plant you can grow from seed at home. We're so excited to finally have it in our lineup!</p>
+          <div class="buy">
+            <p onclick="myFunction()" style=" font-family:'Gill Sans';font-size: 22px;border: 1px;border-radius: 1px;text-align: center">BUY NOW</p>
+        </div>
+        </div>
+      </div>
+      <div class="image">
+        <img src="../images/Buxus bonsai tree.jpg" width="100%" height="250px">
+        <div class="details">
+        <h3 style="padding: 10px; text-align: center;text-decoration: underline  ;">Buxus</h3>
+        <h5 style="text-align: center;font-family: Arial">Original Price : <span style="text-decoration: line-through;">Rs 5000</span> </h5>
+        <h5 style="text-align: center;font-family: Arial">Discounted Price : <span>Rs 4500</span> </h5>
+          <p style="text-align:center">The boxwood often grows with twisted trunks and branches. The flowers are greenish-yellow and attract bees. Boxwoods are very robust and can grow even on barren ground.</p>
+          <div class="buy">
+            <p onclick="myFunction()" style=" font-family:'Gill Sans';font-size: 22px;border: 1px;border-radius: 1px;text-align: center">BUY NOW</p>
+        </div>
+        </div>
+      </div>
+      <div class="image">
+        <img src="../images/Cherry bonsai tree.jpg" width="100%" height="250px">
+        <div class="details">
+        <h3 style="padding: 10px; text-align: center;text-decoration: underline  ;">cherry</h3>
+        <h5 style="text-align: center;font-family: Arial">Original Price : <span style="text-decoration: line-through;">Rs 3500</span> </h5>
+        <h5 style="text-align: center;font-family: Arial">Discounted Price : <span>Rs 3000</span> </h5>
+          <p style="text-align:center">The cherry blossom is a flower of several types cherry trees which are species within the genus Prunus. The most well-known species is the Japanese cherry, Prunus serrulata.It is attractive as well.</p>
+          <div class="buy">
+            <p onclick="myFunction()" style=" font-family:'Gill Sans';font-size: 22px;border: 1px;border-radius: 1px;text-align: center">BUY NOW</p>
+        </div>
+        </div>
+      </div>
+      <div class="image">
+        <img src="../images/Jade bonsai tree.jpg" width="100%" height="250px">
+        <div class="details">
+        <h3 style="padding: 10px; text-align: center;text-decoration: underline  ;">Jade</h3>
+        <h5 style="text-align: center;font-family: Arial">Original Price : <span style="text-decoration: line-through;">Rs 3500</span> </h5>
+        <h5 style="text-align: center;font-family: Arial">Discounted Price : <span>Rs 2800</span> </h5>
+          <p style="text-align:center">The Jade is considered an indoor tree, although it can be grown outdoors in full sun and high temperatures.The bark is green and soft when it's young, and it turns into a red-brown color as it ages.</p>
+          <div class="buy">
+            <p onclick="myFunction()" style=" font-family:'Gill Sans';font-size: 22px;border: 1px;border-radius: 1px;text-align: center">BUY NOW</p>
+        </div>
+        </div>
+      </div>
+      <div class="image">
+        <img src="../images/Pyracantha.jpg" width="100%" height="250px">
+        <div class="details">
+        <h3 style="padding: 10px; text-align: center;text-decoration: underline  ;">Pyracantha</h3>
+        <h5 style="text-align: center;font-family: Arial">Original Price : <span style="text-decoration: line-through;">Rs 5500</span> </h5>
+        <h5 style="text-align: center;font-family: Arial">Discounted Price : <span>Rs 4999</span> </h5>
+          <p style="text-align:center">The small trees or shrubs are native to temperate zones of Asia. They are broadleaf evergreen plants which can grow up to 6 m tall. The leaves are small, ovate, dark green and glossy.</p>
+          <div class="buy">
+            <p onclick="myFunction()" style=" font-family:'Gill Sans';font-size: 22px;border: 1px;border-radius: 1px;text-align: center">BUY NOW</p>
+        </div>
+        </div>
+      </div>
+      <div class="image">
+        <img src="../images/Magnolia.jpg" width="100%" height="250px">
+        <div class="details">
+        <h3 style="padding: 10px; text-align: center;text-decoration: underline  ;">Magnolia</h3>
+        <h5 style="text-align: center;font-family: Arial">Original Price : <span style="text-decoration: line-through;">Rs 3200</span> </h5>
+        <h5 style="text-align: center;font-family: Arial">Discounted Price : <span>Rs 2500</span> </h5>
+          <p style="text-align:center">Magnolia can be a great option for bonsai as it can provide you with attractive white color flowers that will enhance the overall experience while uplifting your mood as well.</p>
+          <div class="buy">
+            <p onclick="myFunction()" style=" font-family:'Gill Sans';font-size: 22px;border: 1px;border-radius: 1px;text-align: center">BUY NOW</p>
+        </div>
+        </div>
+      </div>
+    </section> <!--End of all products section-->
+    <!-- Section down which is a page footer with some useful internal links and also area for email with contact details. -->
+    <div class="footer">
+      <div class="col1">
+        <h3>Bonsai Station</h3>
+        <a href="../html/homepage.html">Home</a>
+            <a href="../html/About Us.html">About</a>
+            <a href="../html/Blog.html">Blog</href>
+            <a href="../html/Products.html">Shop</a>
+            <a href="../html/About Us.html">Contact</a>
+      </div>
+      <div class="col2">
+          <h3>JOIN US FOR DAILY UPDATES</h3>
+          <form>
+              <input type="email" placeholder="Your Email Address" required>
+              <br>
+              <button type="submit">SIGN UP</button>
+          </form>
+      </div>
+      <div class="col3">
+          <h3>CONTACT US</h3>
+          <p>13742, 4TH Floor, Sherpa Mall<br> DurbarMarg, Kathmandu, NP</p>
+          <a href="https://www.facebook.com/profile.php?id=100089508595875" target="_blank"> <img src="../icons/facebook.png" ></a>
+          <a href="https://www.instagram.com/bonsaistationn/?hl=en" target="_blank"><img src="../icons/instagram.png"></a>
+          <a href=""><img src="../icons/twitter.png"></a>
+          <a href="https://www.tiktok.com/@bonsai.station" target="_blank"><img src="../icons/tiktok.png"></a>
+      </div>
+  </div>
+  </div>
+</body>
+</html>
+<!--End of the product page code-->

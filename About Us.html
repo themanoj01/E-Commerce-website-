@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="../css/Style.css">
+    <style>
+      *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+        .about-us {
+  padding: 50px 0;
+  text-align: center;
+  
+  
+}
+
+.about-us h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.about-us p {
+  font-size: 18px;
+  margin-bottom: 40px;
+  padding:0 100px;
+  text-align: center;
+}
+
+.team-member {
+  margin-bottom: 60px;
+  text-align: left;
+  overflow: hidden;
+  position: relative;
+  transition: 0.5s ease-in-out;
+  padding: 5px;
+}
+
+.team-member h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 20px;
+}
+.team-member img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  opacity: 0.9;
+  cursor:pointer;
+  transition:0.5s ease-in-out;
+  border-radius: 50%;
+  height: 300px;
+}
+
+.team-member img:hover{
+   transform: scale(1.1);
+   opacity: 0.8;
+}
+form {
+  margin-top: 60px;
+}
+
+form label {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 10px;
+}
+   form
+    #feedbackform {
+        width: 400px;
+        padding: 50px;
+        margin: 0 50%;
+        background-color: #f2f2f2;
+        border-radius: 20px;
+      }
+      .details {
+        margin-bottom: 20px;
+      }
+      
+      label {
+        font-weight: bold;
+        display: block;
+        margin: 10px;
+        font-size: 18px;
+        
+      }
+      
+      input,textarea {
+        width: 40%;
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+      }
+      
+      button[type="submit"] {
+        width: 40%;
+        padding: 10px;
+        background-color: #000000;
+        color: #ffffff;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      
+      button[type="submit"]:hover {
+        background-color: #f2f2f2;
+        color: black;
+      }
+      </style>
+      <script>
+        function validateform(){
+         var name = document.forms["feedbackform"]["name"].value;
+         var email = document.forms["feedbackform"]["email"].value;
+         var phone = document.forms["feedbackform"]["phone"].value;
+         var message = document.forms["feedbackform"]["message"].value;
+         if (name=="" || email=="" || phone=="" || message==""){
+             alert("please fill the form completely.");
+         }
+         else{
+             alert("Thank you for your feedback.The details You entered are "+"Name : "+name+" Email : "+email+" Phone Number : "+phone+" :  Message : "+message);
+         }
+        }
+       </script>
+</head>
+<body>
+  <navbar>
+    <a href="#"><img src="../images/logodemo1.png" class="logo"></a>
+    <ul>
+      <li><a href="../html/homepage.html">Home</a></li>
+      <li><a href="../html/Products.html">Products</a></li>
+      <li><a href="../html/Blog.html">Blog</a></li>
+      <li><a href="../html/Research.html">Research</a></li>
+      <li><a href="../html/About Us.html">About Us</a></li>
+    </ul>
+</navbar>
+<section class="about-us">
+    <h1 style="padding-top: 100px;">About Us</h1>
+    <p>We are a team of experts dedicated to bringing the best bonsai plants to your doorstep. Our team consists of:</p>
+  
+    <div class="team-member">
+        <img src="../images/Manoj picture.jpg">
+      <h3>Manoj Poudel</h3>
+      <p> Manoj is studying BSC Hons Computing at Islington College Kamalpokhari. He has a passion of cultivating and growing various bonsai specimens<br> with an expertise on web development.</p>
+      <p>Skills: Website development,HTML,CSS,JavaScript</p>
+      <p>Page Assiged: Products Page and Research Page</p>
+    </div>
+  
+    <div class="team-member">
+      <img src="../images/Mohit picture.jpg">
+      <h3>Mohit Manandhar</h3>
+      <p>Mohit is a talented graphic designer with a keen eye for detail. He is responsible for the visual appeal of our website and all marketing materials.<br> Mohit is studying BSC Hons Computing at Islington College Kamalpokhari </p>
+      <p>Skills: Graphic design, branding, marketing,Software development</p>
+      <p>Page Assigned: Home Page</p>
+    </div>
+  
+    <div class="team-member">
+      <img src="../images/Shreya picture.jpg">
+      <h3>Shreya Kalika</h3>
+      <p>Shreya is an expert in web social media handeling with a strong background in marketing and advertising. She is responsible for updating our social media platforms.<br> She is studying BSC Hons Computing at Islington College Kamalpokhari</p>
+      <p>Skills: e-commerce, marketing, social media management,C++ programming</p>
+      <p>Page Assigned: Blog Page</p>
+    </div>
+    <div class="team-member">
+      <img src="../images/Paras picture.jpg">
+        <h3>Paras Kumar Yadav</h3>
+        <p>Paras holds an expertise in web development . He is responsible for building and maintaining our e-commerce website. <br>He is studying BSC Hons Computing at Islington College Kamalpokhari</p>
+        <p>Skills: Web development, e-commerce,java programming</p>
+        <p>Page Assigned: About Us Page</p>
+      </div>
+  
+    <h2>Get in Touch!</h2>
+    <p>If you have any questions or comments, please don't hesitate to reach out to us using the form below:</p>
+  
+    <form id="feedbackform" onsubmit="validateform()">
+        <div class="details">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="details">
+          <label for="email">Email Id:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="details">
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="details">
+          <label for="message">Your Message to us:</label>
+          <textarea id="message" name="message" rows="8" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+  </section>
+  <div class="footer">
+    <div class="col1">
+        <h3>Bonsai Station</h3>
+        <a href="../html/homepage.html">Home</a>
+            <a href="../html/About Us.html">About</a>
+            <a href="../html/Blog.html">Blog</href>
+            <a href="../html/Products.html">Shop</a>
+            <a href="../html/About Us.html">Contact</a>
+    </div>
+    <div class="col2">
+        <h3>JOIN US FOR DAILY UPDATES</h3>
+        <form>
+            <input type="email" placeholder="Your Email Address" required>
+            <br>
+            <button type="submit">SIGN UP</button>
+        </form>
+    </div>
+    <div class="col3">
+        <h3>CONTACT US</h3>
+        <p>13742, 4TH Floor, Sherpa Mall<br> DurbarMarg, Kathmandu, NP</p>
+        <a href="https://www.facebook.com/profile.php?id=100089508595875" target="_blank"> <img src="../icons/facebook.png" ></a>
+        <a href="https://www.instagram.com/bonsaistationn/?hl=en" target="_blank"><img src="../icons/instagram.png"></a>
+        <a href=""><img src="../icons/twitter.png"></a>
+        <a href="https://www.tiktok.com/@bonsai.station" target="_blank"><img src="../icons/tiktok.png"></a>
+    </div>
+</div>
+</body>
+</html

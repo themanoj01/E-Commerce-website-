@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* website font css */
+body{
+    font-family: 'Poppins';
+}
+
+/* navbar css */
+navbar{
+    background-color: #3c2a21;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+}
+
+navbar .logo{
+    position: relative;
+    max-width: 140px;
+}
+
+navbar ul{
+    position: relative;
+    display: flex;
+    margin-left: 600px;
+}
+
+navbar ul li{
+    position: relative;
+    display: flex;
+    margin-left: 10px;
+}
+
+navbar ul li a{
+    font-size: 25px;
+    display: block;
+    color: #f2f2f2;
+    font-weight: 400;
+    margin-left: 80px;
+    text-decoration: none;
+}
+
+navbar ul li a:hover{
+    color: #6ECCAF;
+}
+
+/* footer css */
+.footer{
+    box-sizing: border-box;
+    margin-top: auto;
+    width: 100%;
+    padding: 100px 10%;
+    background: #333;
+    color: #efefef;
+    display: flex;
+    left: 0;
+    bottom: 0;
+}
+
+.footer div{
+     text-align: center;
+     
+}
+
+.col2{
+    flex-grow: 2;
+}
+
+.footer div h3{
+    font-weight: 300;
+    margin-top: 30px;
+    letter-spacing: 1px;
+}
+
+.col1 a{
+    display: block;
+    text-decoration: none;
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.col3 img{
+    padding: 5px;
+    cursor: pointer;
+    width: 50px;
+    padding-top: 8px;
+}
+
+form input{
+    width: 400px;
+    height: 45px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+form button{
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 15px;
+    cursor: pointer;
+}

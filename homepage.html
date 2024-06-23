@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonsai Station</title>
+    <link rel="stylesheet" href="../css/Style.css">
+</head>
+<body>
+    <style>
+
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+section{
+    position: relative;
+    width: 100%;
+    min-height: 1008px;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7f7f7;
+}
+
+/* landing page css */
+.content{
+    position: static;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content .textBox{
+    position: static;
+    max-width: 1000px;
+    margin-bottom: 150px;
+}
+
+.content .textBox h2{
+    color: #333;
+    font-size: 70px;
+    line-height: 90px;
+    font-weight: 500;
+}
+
+.content .textBox h2 span{
+    color: #017143;
+    font-size: 100px;
+    font-weight: 900;
+}
+
+.content .textBox p{
+    color: #333;
+    font-size: 20px;
+}
+
+.content .textBox a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: #017143;
+    color: #f7f7f7;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.content .imgBox{
+    width: 600px;
+    display: flex;
+    justify-content: flex;
+    margin-top: 50px;
+    padding-left: 10px;
+}
+
+.content .imgBox img{
+    max-width: 650px;
+}
+
+.downimg{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: flex;
+    margin-bottom: 120px;
+}
+
+.downimg li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.downimg li:hover{
+   transform: translateY(-15%);
+    
+} 
+
+.downimg li img{
+    max-width: 150px;
+}
+
+/* customer review css */
+.customer-review{
+    padding: 40px 0;
+    background: #f7f7f7;
+    color: #434343;
+    text-align: center;
+    
+}
+
+.inner{
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    padding: 50px 20px;
+}
+
+h1{
+    font-size: 40px;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+h1::after{
+    content: '';
+    width: 750px;
+    height: 4px;
+    background: linear-gradient(to right, #6ECCAF, #ADE792);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.col{
+    flex: 33.33%;
+    max-width: 33.33%;
+    padding: 15px;
+}
+
+.review{
+    background: linear-gradient(to right, #FEF5ED, #D3E4CD);
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.review img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.name{
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+/* second section showcasing the top selling products css */
+.container{
+    max-width: 1800px;
+    overflow: hidden;
+    padding: 40px 30px;
+}
+
+.container h5{
+    font-size: 40px;
+    position: relative;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+h5::after{
+    content: '';
+    width: 530px;
+    height: 4px;
+    background: linear-gradient(to right, #6ECCAF, #ADE792);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.container a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: #017143;
+    color: #f7f7f7;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.container .products-container{
+    display: flex;
+    gap: 80px;
+    padding-left: 50px;
+}
+
+.container .products-container .products{
+    text-align: center;
+    padding: 40px 35px;
+    background: #fff;
+    outline: 2px solid #ccc;
+    outline-offset: -20px;
+    cursor: pointer;
+}
+
+.container .products-container .products:hover{
+    outline: 5px solid #222;
+    outline-offset: 0;
+    transition: 0.4s;
+}
+
+.container .products-container .products img{
+    height: 300px;
+}
+
+.container .products-container .products:hover img{
+    transform: scale(.96);
+    transition: 0.4s;
+}
+
+.container .products-container .products h4{
+    padding: 10px;
+    font-size: 30px;
+    color: black;
+}
+
+.container .products-container .products:hover h4{
+    color: #6ECCAF;
+    transition: 0.4s;
+}
+
+
+.container .products-container .products .price{
+    color: black;
+    font-size: 32px;
+
+}
+
+    </style>
+
+    <script type="text/javascript">
+    function imgSlider(anything)
+    {
+        document.querySelector('.bonsai').src=anything;
+    }
+    </script>   
+
+
+    <section>
+        <!-- navbar html -->
+        <navbar>
+            <a href="#"><img src="../images/logodemo1.png" class="logo"></a>
+            <ul>
+                <li><a href="../html/homepage.html">Home</a></li>
+                <li><a href="../html/Products.html">Products</a></li>
+                <li><a href="../html/Blog.html">Blog</a></li>
+                <li><a href="../html/Research.html">Research</a></li>
+                <li><a href="../html/About Us.html">About Us</a></li>
+            </ul>
+        </navbar>
+        <!-- landing page html -->
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just a Plant<br>It's <span> Bonsai</span></h2>
+                <p>Bonsai Station is an ecommerce website that provides customers with high-quality bonsai products and exceptional service. With a focus on customer satisfaction, the website offers a wide range of bonsai trees, tools, soil, and accessories, carefully selected to ensure the best quality. In addition to a user-friendly interface, Bonsai Station offers convenient payment options, fast and reliable shipping, and a responsive customer support team, making it a one-stop-shop for all bonsai needs. With a commitment to providing the best bonsai experience, Bonsai Station is the go-to destination for bonsai enthusiasts and hobbyists alike.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="../images/sageretia.png" class="bonsai">
+            </div>
+        </div>
+        <ul class="downimg">
+            <li><img src="../images/sageretiahover.png" onclick="imgSlider('../images/sageretia.png')"></li>
+            <li><img src="../images/banyanficushover.png" style="margin-top: 48px;" onclick="imgSlider('../images/banyanficus.png')"></li>
+            <li><img src="../images/juniperushover.png" style="margin-top: 18px;" onclick="imgSlider('../images/juniperus.png')"></li>
+        </ul>
+    </section>
+
+    <!-- section section showcasing our top selling products -->
+    <section>
+        <div class="container">
+
+            <h5> Showcasing Our Top Sellers </h5> 
+            
+
+            <div class="products-container">
+
+                <div class="products">
+                    <img src="../images/p1.jpg">
+                    <h4>Jade</h4>
+                    <div class="price">NRS. 3200</div>
+                </div>
+
+                <div class="products">
+                    <img src="../images/p2.jpg">
+                    <h4>Red Mapple</h4>
+                    <div class="price">NRS. 4100</div>
+                </div>
+
+                <div class="products">
+                    <img src="../images/p3.jpg">
+                    <h4>Shonin</h4>
+                    <div class="price">NRS. 2900</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- customer review section -->
+    <section class="rev">
+        <div class="customer-review">
+            <div class="inner">
+                <h1>Read What Our Customers Have To Say</h1>
+                
+                <div class="row">
+                    <div class="col">
+                        <div class="review">
+                            <img src="../images/1.jpg">
+                            <div class="name">Abhinav Prasad Devkota</div>
+                            <p>The Jade bonsai is a gorgeous addition to my collection. Easy to care for and constantly thriving. Love the small leaves and delicate branches. Loved it and Highly recommended! </p>
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="review">
+                            <img src="../images/2.jpg">
+                            <div class="name">Reeyansh PK Bajracharya</div>
+                            <p>I recently purchased a Banyanficus bonsai from Bonsai Station and I am extremely satisfied!I highly recommend both the Banyanficus bonsai and Bonsai Station. 10 out of 10 customer service</p>
+                            
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="review">
+                            <img src="../images/3.jpg">
+                            <div class="name">Bijju Dhunju Shrestha</div>
+                            <p>Wattle bonsai adds unique beauty to collection. Arrived healthy, thriving. Texture, shape of leaves lovely. Easy care, highly recommend. Amazing customer service! 9 out of 10 overall.<p>
+                            
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="review">
+                            <img src="../images/4.jpg">
+                            <div class="name">Shreejal Monte Dangol</div>
+                            <p>"I recently purchased a Sageretia bonsai from Bonsai Station and I am extremely impressed! The tree arrived in perfect condition and is already thriving in its new home. Great service</p>
+                            
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="review">
+                            <img src="../images/5.jpg">
+                            <div class="name">Jasmine Binu Adhikari</div>
+                            <p>Shonin bonsai is stunning, well-crafted. Arrived in perfect condition. Adds a touch of nature to my home. Highly recommend this product. Took a bit of time to arrive but worth the wait!</p>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="col">
+                        <div class="review">
+                            <img src="../images/6.jpg">
+                            <div class="name">Sadi Bella Mahaju</div>
+                            <p>I am thrilled with my Banyanficus bonsai purchased from Bonsai Station. The customer service at Bonsai Station was outstanding and I appreciated the care taken in packaging my purchase.</p>
+                            
+                        </div>
+                    </div>                   
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- footer html -->
+        <div class="footer">
+            <div class="col1">
+            <h3>Bonsai Station</h3>
+            <a href="../html/homepage.html">Home</a>
+            <a href="../html/About Us.html">About</a>
+            <a href="../html/Blog.html">Blog</href>
+            <a href="../html/Products.html">Shop</a>
+            <a href="../html/About Us.html">Contact</a>
+        </div>
+            <div class="col2">
+                <h3>JOIN US FOR DAILY UPDATES</h3>
+                <form>
+                    <input type="email" placeholder="Your Email Address" required>
+                    <br>
+                    <button type="submit">SIGN UP</button>
+                </form>
+            </div>
+            <div class="col3">
+                <h3>CONTACT US</h3>
+                <p>13742, 4TH Floor, Sherpa Mall<br> DurbarMarg, Kathmandu, NP</p>
+                <a href="https://www.facebook.com/profile.php?id=100089508595875" target="_blank"> <img src="../icons/facebook.png" ></a>
+                <a href="https://www.instagram.com/bonsaistationn/?hl=en" target="_blank"><img src="../icons/instagram.png"></a>
+                <a href=""><img src="../icons/twitter.png"></a>
+                <a href="https://www.tiktok.com/@bonsai.station" target="_blank"><img src="../icons/tiktok.png"></a>
+            </div>
+        </div>
+</body>
+</html>
